@@ -18,9 +18,12 @@ jobs:
       - name: Install Shopify CLI
         run: npm install -g @shopify/cli
 
+      # --force: skips confirmation prompt since CI environment is non-interactive
+      # SHOPIFY_FLAG_FORCE: 1 is the environment variable equivalent of --force flag
       - name: Upload theme
         run: |
           shopify theme push \
+            --force \
             --json \
             --theme 186162217272 \
             --store ${{ secrets.SHOPIFY_FLAG_STORE }} \
