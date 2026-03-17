@@ -16,7 +16,7 @@ jobs:
           node-version: 20
 
       - name: Install Shopify CLI
-        run: npm install -g @shopify/cli
+        run: npm install -g @shopify/cli@3.70.0
 
       - name: Upload theme
         env:
