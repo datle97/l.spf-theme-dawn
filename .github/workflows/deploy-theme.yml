@@ -16,7 +16,7 @@ jobs:
           node-version: 20
 
       - name: Install Shopify CLI
-        run: npm install -g @shopify/cli@3.68.0 @shopify/theme@3.68.0
+        run: npm install -g @shopify/cli@3.68.0
 
       - name: Upload theme
         env:
@@ -25,6 +25,6 @@ jobs:
           SHOPIFY_FLAG_FORCE: "1"
         run: |
           shopify theme push \
-            ----allow-live \
+            --allow-live \
             --json \
             --theme 186162217272
